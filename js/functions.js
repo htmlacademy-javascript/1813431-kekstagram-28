@@ -21,7 +21,7 @@ const checkString = (string, maxLength) => {
     string.length <= maxLength;
 };*/
 
-(checkString('проверяемая строка', 18));
+checkString('проверяемая строка', 18);
 
 // Задание № 2
 
@@ -35,7 +35,7 @@ const checkString = (string, maxLength) => {
 
 
 const isPalindrome = (string) => {
-  const tempString = string.toLowerCase();
+  const tempString = string.toLowerCase().replaceAll(' ', '');
   let reverseString = '';
   for (let i = tempString.length - 1; i >= 0; i--) {
     reverseString += tempString[i];
@@ -47,17 +47,14 @@ const isPalindrome = (string) => {
   return false;
 };
 
-// const isPalindrome = (string) => {
-//   const tempString = string.toLowerCase();
-//   let reverseString = '';
-//   for (let i = tempString.length-1; i >= 0; i--) {
-//     reverseString += tempString[i];
-//   }
-//   if (tempString === reverseString) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
+/*const isPalindrome = (string) => {
+  const tempString = string.toLowerCase();
+  let reverseString = '';
+  for (let i = tempString.length - 1; i >= 0; i--) {
+    reverseString += tempString[i];
+  }
+  console.log(reverseString);
+  return tempString === reverseString
+};*/
 
-console.log(isPalindrome('121'));
+console.log(isPalindrome('Лёша на полке клопа нашёл'));
