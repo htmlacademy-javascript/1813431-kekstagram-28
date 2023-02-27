@@ -33,7 +33,6 @@ checkString('проверяемая строка', 18);
 // Перевернуть строку справа-налево. На кадом шаге цикла добавлять в новую переменную букву
 // Если перевернутая строка = исходной строке, то возвращает true, если нет - false
 
-
 const isPalindrome = (string) => {
   const tempString = string.toLowerCase().replaceAll(' ', '');
   let reverseString = '';
@@ -57,4 +56,37 @@ const isPalindrome = (string) => {
   return tempString === reverseString
 };*/
 
-console.log(isPalindrome('Лёша на полке клопа нашёл'));
+isPalindrome('Лёша на полке клопа нашёл');
+
+// Задание № 3
+
+// Функиця извлекает из строки цифры и возвращает число из них
+// Функция принимает параметр строку
+// Проверяет строку на наличие цифр
+// Если в строке нет цифр, то возвращает NaN
+
+const extractNumber = (string) => {
+  let result = '';
+  for (let i = 0; i < string.length; i++) {
+    if (!Number.isNaN(parseInt(string[i], 10))) {
+      result += string[i];
+    }
+  }
+  return parseInt(result, 10);
+};
+
+// const extractNumber = (string) => {
+//   if (typeof string === 'number') {
+//     return string;
+//   }
+
+//   let result = '';
+//   for (let i = 0; i < string.length; i++) {
+//     if (!Number.isNaN(parseInt(string[i], 10))) {
+//       result += string[i];
+//     }
+//   }
+//   return parseInt(result, 10);
+// };
+
+console.log(extractNumber(6));
