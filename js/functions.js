@@ -89,4 +89,43 @@ const extractNumber = (string) => {
 //   return parseInt(result, 10);
 // };
 
-console.log(extractNumber(6));
+console.log(extractNumber(-1));
+
+// Задание № 4
+
+// Функция возвращает строку, дополненную указанными символами
+/* Функиция принимает три параметра:
+Исходная строка
+Минимальная длина
+Строка с добавочными символами*/
+// Символы добавляются в начало строки до заданной длины
+// Исходная строка не обрезается, если она превышает заданную длину
+// Если добивка слишком длинная, она обрезается с конца
+
+const myPadStart = (string, minLength, pad) => {
+  const actualPad = minLength - string.length;
+  if (actualPad <= 0) {
+    return string;
+  }
+
+  return pad.slice(0, actualPad % pad.length) + pad.repeat(actualPad / pad.length) + string;
+};
+
+// const myPadStart = (string, minLength, pad) => {
+//   const actualPad = minLength - string.length;
+//   console.log('actualPad', actualPad);
+//   if (actualPad <= 0) {
+//     console.log('actualPad less or equal 0');
+//     return string;
+//   }
+//   const tempPad = pad.slice(0, actualPad % pad.length);
+//   console.log('tempPad', tempPad);
+
+//   const tempRepeat = pad.repeat(actualPad / pad.length);
+//   console.log('actualPad / pad.length', actualPad / pad.length);
+//   console.log('tempRepeat', tempRepeat);
+
+//   return tempPad + tempRepeat + string;
+// };
+
+console.log(myPadStart('q', 4, 'we'));
