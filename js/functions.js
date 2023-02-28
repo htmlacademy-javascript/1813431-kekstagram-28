@@ -1,7 +1,6 @@
 // Задание № 1
 
 // С помощью JavaScript настраивается проверка длины строки.
-
 // Функция принимает строку и число (максимальную длину)
 // Если строка меньше указанной длины, тогда true
 // Если строка больше укащанной длины, тогда false
@@ -13,6 +12,7 @@ const checkString = (string, maxLength) => {
   return false;
 };
 
+// Другое решение
 /* const checkString = (string, maxLength) => {
   return string.length <= maxLength;
 };*/
@@ -39,13 +39,13 @@ const isPalindrome = (string) => {
   for (let i = tempString.length - 1; i >= 0; i--) {
     reverseString += tempString[i];
   }
-  console.log(reverseString);
   if (tempString === reverseString) {
     return true;
   }
   return false;
 };
 
+// Другое решение
 /*const isPalindrome = (string) => {
   const tempString = string.toLowerCase();
   let reverseString = '';
@@ -75,21 +75,22 @@ const extractNumber = (string) => {
   return parseInt(result, 10);
 };
 
-// const extractNumber = (string) => {
-//   if (typeof string === 'number') {
-//     return string;
-//   }
+// Другое решение
+/*const extractNumber = (string) => {
+  if (typeof string === 'number') {
+    return string;
+  }
 
-//   let result = '';
-//   for (let i = 0; i < string.length; i++) {
-//     if (!Number.isNaN(parseInt(string[i], 10))) {
-//       result += string[i];
-//     }
-//   }
-//   return parseInt(result, 10);
-// };
+  let result = '';
+  for (let i = 0; i < string.length; i++) {
+    if (!Number.isNaN(parseInt(string[i], 10))) {
+      result += string[i];
+    }
+  }
+  return parseInt(result, 10);
+};*/
 
-console.log(extractNumber(-1));
+extractNumber(-1);
 
 // Задание № 4
 
@@ -111,21 +112,22 @@ const myPadStart = (string, minLength, pad) => {
   return pad.slice(0, actualPad % pad.length) + pad.repeat(actualPad / pad.length) + string;
 };
 
-// const myPadStart = (string, minLength, pad) => {
-//   const actualPad = minLength - string.length;
-//   console.log('actualPad', actualPad);
-//   if (actualPad <= 0) {
-//     console.log('actualPad less or equal 0');
-//     return string;
-//   }
-//   const tempPad = pad.slice(0, actualPad % pad.length);
-//   console.log('tempPad', tempPad);
+// Другое решение
+/*const myPadStart = (string, minLength, pad) => {
+  const actualPad = minLength - string.length;
+  console.log('actualPad', actualPad);
+  if (actualPad <= 0) {
+    console.log('actualPad less or equal 0');
+    return string;
+  }
+  const tempPad = pad.slice(0, actualPad % pad.length);
+  console.log('tempPad', tempPad);
 
-//   const tempRepeat = pad.repeat(actualPad / pad.length);
-//   console.log('actualPad / pad.length', actualPad / pad.length);
-//   console.log('tempRepeat', tempRepeat);
+  const tempRepeat = pad.repeat(actualPad / pad.length);
+  console.log('actualPad / pad.length', actualPad / pad.length);
+  console.log('tempRepeat', tempRepeat);
 
-//   return tempPad + tempRepeat + string;
-// };
+  return tempPad + tempRepeat + string;
+};*/
 
-console.log(myPadStart('q', 4, 'we'));
+myPadStart('q', 4, 'we');
