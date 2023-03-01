@@ -101,7 +101,7 @@ extractNumber(-1);
 // Исходная строка не обрезается, если она превышает заданную длину
 // Если добивка слишком длинная, она обрезается с конца
 
-const myPadStart = (string, minLength, pad) => {
+const getPadStart = (string, minLength, pad) => {
   const actualPad = minLength - string.length;
   if (actualPad <= 0) {
     return string;
@@ -128,4 +128,4 @@ const myPadStart = (string, minLength, pad) => {
   return tempPad + tempRepeat + string;
 };*/
 
-myPadStart('q', 4, 'we');
+getPadStart('q', 4, 'we');
