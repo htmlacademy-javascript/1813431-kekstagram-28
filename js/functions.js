@@ -5,23 +5,21 @@
 // Если строка меньше указанной длины, тогда true
 // Если строка больше укащанной длины, тогда false
 
-const checkString = (string, maxLength) => {
-  if (string.length <= maxLength) {
-    return true;
-  }
-  return false;
-};
+// const checkString = (string, maxLength) => {
+//   if (string.length <= maxLength) {
+//     return true;
+//   }
+//   return false;
+// };
 
 // Другое решение
-/* const checkString = (string, maxLength) => {
-  return string.length <= maxLength;
-};*/
+const checkString = (string, maxLength) => string.length <= maxLength;
 
 /* const checkString = (string, maxLength) => {
     string.length <= maxLength;
 };*/
 
-checkString('проверяемая строка', 18);
+(checkString('проверяемая строка', 18));
 
 // Задание № 2
 
