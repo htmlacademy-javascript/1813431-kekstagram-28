@@ -58,7 +58,7 @@ const generateCommentId = getIdGenerator();
 
 // Генерация комментария к фото
 
-const getComments = () => ({
+const getComment = () => ({
   id: generateCommentId(),
   avatar: `img/avatar-${getRandomInteger(1, AVATAR_COUNT)}`,
   message: getRandomArrayElement(MESSAGES),
@@ -75,7 +75,7 @@ const createPhotoDescription = () => {
     url: `photos/${uniqueValue}`,
     description: getRandomArrayElement(DESCRIPTIONS),
     likes: getRandomInteger(MIN_LIKE_COUNT, MAX_LIKE_COUNT),
-    comments: Array.from({ length: getRandomInteger(1, COMMENT_COUNT) }, getComments)
+    comments: Array.from({ length: getRandomInteger(1, COMMENT_COUNT) }, getComment)
   };
 };
 
