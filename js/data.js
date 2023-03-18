@@ -1,4 +1,4 @@
-import { getRandomInteger, createUniqueValue, getRandomArrayElement } from './util';
+import { getRandomInteger, createUniqueValue, getRandomArrayElement } from './util.js';
 
 //  Создать массив из 25 сгенерированных объектов
 
