@@ -83,4 +83,4 @@ const createPhotoDescription = () => {
 
 const createPhotoCards = () => Array.from({ length: PHOTO_CARDS_COUNT }, createPhotoDescription);
 
-export { createPhotoCards };
+export { createPhotoCards, COMMENT_COUNT };
