@@ -1,4 +1,4 @@
-import { createPhotoCards } from './data.js';
+// import { createPhotoCards } from './data.js';
 import './mini-photos.js';
 
-console.log(createPhotoCards());
+// console.log(createPhotoCards());
