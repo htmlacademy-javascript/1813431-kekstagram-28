@@ -72,7 +72,7 @@ const createPhotoDescription = () => {
 
   return {
     id: uniqueValue,
-    url: `photos/${uniqueValue}`,
+    url: `photos/${uniqueValue}.jpg`,
     description: getRandomArrayElement(DESCRIPTIONS),
     likes: getRandomInteger(MIN_LIKE_COUNT, MAX_LIKE_COUNT),
     comments: Array.from({ length: getRandomInteger(1, COMMENT_COUNT) }, getComment)
