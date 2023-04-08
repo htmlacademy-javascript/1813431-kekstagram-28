@@ -18,7 +18,7 @@ const miniPhotos = createPhotoCards();
 const picturesListFragment = document.createDocumentFragment();
 
 // Клонируем шаблон и отрисовываем в списке
-miniPhotos.forEach(({miniPhoto}) => {
+miniPhotos.forEach((miniPhoto) => {
   const miniPhotoElement = miniPhotoTemplate.cloneNode(true);
   miniPhotoElement.querySelector('.picture__img').src = miniPhoto.url;
   miniPhotoElement.querySelector('.picture__likes').textContent = miniPhoto.likes;
